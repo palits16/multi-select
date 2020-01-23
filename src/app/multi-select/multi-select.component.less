@@ -1,0 +1,152 @@
+@color-red: #e81b71;
+@color-green: #00b8a3;
+@color-blue: #0060a7;
+@color-blue-light: #0077c8;
+@color-skyblue: #cef2ff;
+@color-yellow: #ffcd00;
+@color-gray: #c4c4c4;
+@color-gray-dark: #919191;
+@color-gray-light: #ebebeb;
+@color-gray-light2: #cfcfcf;
+
+// Text Colors
+
+.c-blue-light {
+  color: @color-blue-light;
+}
+.c-gray-dark {
+  color: #919191 !important;
+}
+
+// Background Colors
+
+.bg-gray {
+  background-color: @color-gray;
+}
+.bg-gray-light {
+  background-color: @color-gray-light;
+}
+.bg-skyblue {
+  background-color: @color-skyblue;
+}
+
+.select-multiple {
+  .wrapper {
+    position: relative;
+  }
+  .values {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    box-sizing: content-box;
+    border-radius: 6px;
+
+    height: 52px;
+    padding: 0px;
+    margin: 0px;
+
+    input {
+      width: 100%;
+      border: none;
+    }
+
+    ul {
+      position: absolute;
+      padding-top: 14px;
+      top: -19px;
+      display: block;
+      left: -32px;
+      z-index: 2;
+
+      li {
+        top: 32px;
+        display: inline;
+        border: 1px solid #cbcbcb;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    p.csm-label {
+      margin: 0 5px 0 0;
+      display: inline;
+    }
+
+    button.csm-deselector {
+      border: none;
+      border-radius: 50%;
+
+      width: 22px;
+      height: 22px;
+
+      span {
+        top: 2px;
+        left: -2px;
+      }
+    }
+  }
+  .options {
+    margin-top: 1px;
+    background: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        padding: 10px;
+      }
+
+      li:hover {
+        background-color: @color-skyblue;
+      }
+
+      button.csm-selector-selected {
+        border: none;
+        border-radius: 50%;
+        background-color: @color-blue;
+        color: #fff;
+
+        width: 22px;
+        height: 22px;
+
+        span {
+          left: -3px;
+          top: 3px;
+        }
+      }
+
+      button.csm-selector-unselected {
+        border: 2px solid #cfcfcf;
+        border-radius: 50%;
+
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.control-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #393939;
+  margin: 0px 0 5px;
+}

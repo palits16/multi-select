@@ -1,0 +1,53 @@
+<div
+  class="select-multiple"
+  click-outside
+  (on-click-outside)="hideOptions()"
+>
+  <p
+    *ngIf="label"
+    class="control-label"
+  >
+    {{ label }}
+  </p>
+  <div class="wrapper">
+    <div class="values">
+      <input
+        class="values"
+        (click)="toggleOptions()"
+        (focusout)="(false)"
+        readonly
+      />
+      <ul>
+        <li *ngFor="let item of itemsFormArray.controls; let i = index">
+          <p class="csm-label c-gray-dark">
+            {{ item.controls.name.value | titlecase }}
+          </p>
+          <button
+            class="csm-deselector bg-gray-light c-gray-dark"
+            (click)="deselect(i)"
+          >
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="options" *ngIf="isOptionsVisible">
+      <ul>
+        <li *ngFor="let option of options" (click)="actionItem(option.value)">
+          <p>
+            {{ itemsFormArray.controls.value }}
+          </p>
+          <span class="pull-right">
+            <button [ngClass]="isChecked(option.value)">
+              <span
+                *ngIf="isChecked(option.value) == 'csm-selector-selected'"
+                class="glyphicon glyphicon-ok"
+              ></span>
+            </button>
+          </span>
+          <p class="csm-label">{{ option.text }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
