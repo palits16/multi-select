@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public cebSelectMultipleValues = ['apple', 'orange', 'banana'];
+  public selectMultipleValues = ['apple', 'orange', 'banana'];
   title = 'dev';
   elementsFormGroup: FormGroup;
   public selections: string[];
@@ -32,12 +32,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.elementsFormGroup = this.formBuilder.group({
-      cebSelectMultiple: this.formBuilder.array([], []),
+      selectMultiple: this.formBuilder.array([], []),
     });
   }
 
   onSelectMultipleChanges(value: string[]): void {
-    //console.log('onSelectMultipleChanges', value);
     this.selections = value;
   }
 }
